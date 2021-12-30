@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/profile/static/css/main.464d9c99.css",
+    "main.js": "/profile/static/js/main.0b04ad18.js",
+    "static/js/787.8573849c.chunk.js": "/profile/static/js/787.8573849c.chunk.js",
+    "static/media/rdp-logo.png": "/profile/static/media/rdp-logo.d2e9abb3cd47d613c882.png",
+    "static/media/profile-picture.png": "/profile/static/media/profile-picture.b10aaf77f33ed6c3a304.png",
+    "index.html": "/profile/index.html",
+    "main.464d9c99.css.map": "/profile/static/css/main.464d9c99.css.map",
+    "main.0b04ad18.js.map": "/profile/static/js/main.0b04ad18.js.map",
+    "787.8573849c.chunk.js.map": "/profile/static/js/787.8573849c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.464d9c99.css",
+    "static/js/main.0b04ad18.js"
+  ]
+}
