@@ -1,6 +1,7 @@
 export const mediumDevice = 768
 export const smallDevice = 450
 export const webContentMaxWidth = 1200
+export const baseUrl = "/profile"
 export const lang = "ENG"
 export const color = {
   blue: "#007aff",

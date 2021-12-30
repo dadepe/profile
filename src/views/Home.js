@@ -6,6 +6,7 @@ import { AboutMeLeft, AboutMeRight } from "components/Content/AboutMe"
 import { HacktivVidLeft, HacktivVidRight } from "components/Content/HacktivVid"
 import { color } from "config"
 import { ImageContent, TitleContent } from "components/Content/TitleImage"
+import { baseUrl } from "config"
 
 const Row = styled.div`
   display: flex;
@@ -53,12 +54,15 @@ export default function Home(props) {
 
       <Content
         backgroundColor={"#fff"}
-        rightBackgroundImg="url(/img/hacktiv36.png)"
+        rightBackgroundImg={`url(${baseUrl}/img/hacktiv36.png)`}
         LeftComponent={() => (
           <TitleContent title="i'm Hacktiv8 Graduate" subTitle={gradSubTitle} />
         )}
         RightComponent={() => (
-          <ImageContent img="/img/hacktiv36.png" objectFit="contain" />
+          <ImageContent
+            img={`${baseUrl}/img/hacktiv36.png`}
+            objectFit="contain"
+          />
         )}
       />
       <Content
@@ -70,16 +74,18 @@ export default function Home(props) {
       <Content
         id="experience"
         backgroundColor={"#fff"}
-        rightBackgroundImg="url(/img/work-exp.png)"
+        rightBackgroundImg={`url(${baseUrl}/img/work-exp.png)`}
         LeftComponent={() => (
           <TitleContent title="My Work Experience" subTitle={workSubtitle} />
         )}
-        RightComponent={() => <ImageContent img="/img/work-exp.png" />}
+        RightComponent={() => (
+          <ImageContent img={`${baseUrl}/img/work-exp.png`} />
+        )}
       />
       <Content
         transition="content-transition-right"
         backgroundColor={"#f4f4f4"}
-        rightBackgroundImg="url(/img/merchaner.png)"
+        rightBackgroundImg={`url(${baseUrl}/img/merchaner.png)`}
         LeftComponent={() => (
           <TitleContent
             title="Front End Developer At PT Juli App Indonesia"
@@ -91,14 +97,14 @@ export default function Home(props) {
         RightComponent={() => (
           <ImageContent
             backgroundColor="#f4f4f4"
-            img="/img/merchaner.png"
+            img={`${baseUrl}/img/merchaner.png`}
             objectFit="contain"
           />
         )}
       />
       <Content
         transition="content-transition-left"
-        rightBackgroundImg="url(/img/internship.png)"
+        rightBackgroundImg={`url(${baseUrl}/img/internship.png)`}
         LeftComponent={() => (
           <TitleContent
             title="Internship at financial institutions"
@@ -106,15 +112,21 @@ export default function Home(props) {
           />
         )}
         RightComponent={() => (
-          <ImageContent img="/img/internship.png" objectFit="contain" />
+          <ImageContent
+            img={`${baseUrl}/img/internship.png`}
+            objectFit="contain"
+          />
         )}
       />
       <Content
         id="project"
         backgroundColor={"#f4f4f4"}
-        leftBackgroundImg="url(/img/project.png)"
+        leftBackgroundImg={`url(${baseUrl}/img/project.png)`}
         LeftComponent={() => (
-          <ImageContent img="/img/project.png" backgroundColor={"#f4f4f4"} />
+          <ImageContent
+            img={`${baseUrl}/img/project.png`}
+            backgroundColor={"#f4f4f4"}
+          />
         )}
         RightComponent={() => (
           <TitleContent
@@ -131,7 +143,7 @@ export default function Home(props) {
           <ImageContent
             showOnWeb
             wrapperStyle={{ padding: "25%" }}
-            img="/img/merchaner-logo.png"
+            img={`${baseUrl}/img/merchaner-logo.png`}
             objectFit="contain"
           />
         )}
@@ -151,7 +163,7 @@ export default function Home(props) {
           <ImageContent
             showOnWeb
             wrapperStyle={{ padding: "20%" }}
-            img="/img/kitadonor-logo.png"
+            img={`${baseUrl}/img/kitadonor-logo.png`}
             objectFit="contain"
             backgroundColor={"#f4f4f4"}
           />

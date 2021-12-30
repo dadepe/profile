@@ -9,7 +9,7 @@ function App() {
     <AppContainer>
       <ContainerWithNav>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/*" element={<Home />} />
         </Routes>
       </ContainerWithNav>
       <Footer />
