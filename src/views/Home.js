@@ -1,0 +1,170 @@
+import React from "react"
+import styled from "styled-components"
+import Content from "components/Content"
+import { AboutMeLeft, AboutMeRight } from "components/Content/AboutMe"
+
+import { HacktivVidLeft, HacktivVidRight } from "components/Content/HacktivVid"
+import { color } from "config"
+import { ImageContent, TitleContent } from "components/Content/TitleImage"
+
+const Row = styled.div`
+  display: flex;
+`
+
+const Column = styled(Row)`
+  flex-direction: column;
+`
+
+const Container = styled(Column)``
+
+export default function Home(props) {
+  const gradSubTitle = `Hacktiv8 is a coding bootcamp that transforms beginners into full-stack developers in 16 weeks.\n
+  I've completed FullStack JavaScript Immersive program from Hacktiv8, and from there i'm starting to create a website or mobile application for a company or for myself.`
+
+  const workSubtitle = `I have experience for developing and maintaining the user interface for web and mobile application at my previous company. \n 
+    And before i started learning code, i have a background in Sharia Finance and Banking Management and also have internship experience in some financial institution.
+    `
+
+  const juliSubtitle = `PT. Juli App Indonesia is a tech-based startup focusing on second-hand clothing social marketplace, Merchaner.\n
+    My task is to developing and maintaining the UI for web and mobile application 
+    `
+
+  const internSubtitle = `I have internship experiences at Bank Indonesia as central bank of indonesia, Otoritas Jasa Keungan as Financial Authority of Indonesia, and Bank Mega Syariah as Financial Institution.
+  `
+
+  const projectSubtitle = `Here the projects that i do as a Front End Developer. \n
+    I'am developing and managing the user interface of websites and mobile applications that i worked together with my previous team.
+  `
+
+  const merchanerSubtitle = `a social marketplace to sell second-hand/preloved clothing with creating a big community for thrift enthusiast to interact with one another easily.`
+
+  const kitadonorSubtitle = `a web application for broadcasting donor needs, to ease up the process of finding donors for those who are looking for blood or plasma donors.`
+
+  return (
+    <Container>
+      <Content
+        id="about"
+        transition={null}
+        leftBackgroundColor="#F4F4F4"
+        rightBackgroundColor="#2b2b2b"
+        LeftComponent={AboutMeLeft}
+        RightComponent={AboutMeRight}
+      />
+
+      <Content
+        backgroundColor={"#fff"}
+        rightBackgroundImg="url(/img/hacktiv36.png)"
+        LeftComponent={() => (
+          <TitleContent title="i'm Hacktiv8 Graduate" subTitle={gradSubTitle} />
+        )}
+        RightComponent={() => (
+          <ImageContent img="/img/hacktiv36.png" objectFit="contain" />
+        )}
+      />
+      <Content
+        transition="content-transition-left"
+        backgroundColor={color.orange}
+        LeftComponent={HacktivVidLeft}
+        RightComponent={HacktivVidRight}
+      />
+      <Content
+        id="experience"
+        backgroundColor={"#fff"}
+        rightBackgroundImg="url(/img/work-exp.png)"
+        LeftComponent={() => (
+          <TitleContent title="My Work Experience" subTitle={workSubtitle} />
+        )}
+        RightComponent={() => <ImageContent img="/img/work-exp.png" />}
+      />
+      <Content
+        transition="content-transition-right"
+        backgroundColor={"#f4f4f4"}
+        rightBackgroundImg="url(/img/merchaner.png)"
+        LeftComponent={() => (
+          <TitleContent
+            title="Front End Developer At PT Juli App Indonesia"
+            backgroundColor="#f4f4f4"
+            subTitle={juliSubtitle}
+            // linkData={{ title: "See Website", href: "https://merchaner.com" }}
+          />
+        )}
+        RightComponent={() => (
+          <ImageContent
+            backgroundColor="#f4f4f4"
+            img="/img/merchaner.png"
+            objectFit="contain"
+          />
+        )}
+      />
+      <Content
+        transition="content-transition-left"
+        rightBackgroundImg="url(/img/internship.png)"
+        LeftComponent={() => (
+          <TitleContent
+            title="Internship at financial institutions"
+            subTitle={internSubtitle}
+          />
+        )}
+        RightComponent={() => (
+          <ImageContent img="/img/internship.png" objectFit="contain" />
+        )}
+      />
+      <Content
+        id="project"
+        backgroundColor={"#f4f4f4"}
+        leftBackgroundImg="url(/img/project.png)"
+        LeftComponent={() => (
+          <ImageContent img="/img/project.png" backgroundColor={"#f4f4f4"} />
+        )}
+        RightComponent={() => (
+          <TitleContent
+            title="My Latest Project"
+            subTitle={projectSubtitle}
+            backgroundColor={"#f4f4f4"}
+          />
+        )}
+      />
+
+      <Content
+        transition="content-transition-right"
+        LeftComponent={() => (
+          <ImageContent
+            showOnWeb
+            wrapperStyle={{ padding: "25%" }}
+            img="/img/merchaner-logo.png"
+            objectFit="contain"
+          />
+        )}
+        RightComponent={() => (
+          <TitleContent
+            title="Merchaner"
+            subTitle={merchanerSubtitle}
+            linkData={{ title: "See Website", href: "https://merchaner.com" }}
+          />
+        )}
+      />
+
+      <Content
+        transition="content-transition-left"
+        backgroundColor={"#f4f4f4"}
+        LeftComponent={() => (
+          <ImageContent
+            showOnWeb
+            wrapperStyle={{ padding: "20%" }}
+            img="/img/kitadonor-logo.png"
+            objectFit="contain"
+            backgroundColor={"#f4f4f4"}
+          />
+        )}
+        RightComponent={() => (
+          <TitleContent
+            title="KitaDonor"
+            subTitle={kitadonorSubtitle}
+            backgroundColor={"#f4f4f4"}
+            linkData={{ title: "See Website", href: "https://kitadonor.com" }}
+          />
+        )}
+      />
+    </Container>
+  )
+}

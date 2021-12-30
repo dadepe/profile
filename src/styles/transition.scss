@@ -1,0 +1,138 @@
+@import "variables";
+
+/* MIXIN */
+
+@mixin contentAppearStart {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 2000ms;
+}
+
+@mixin contentAppearEnd {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 2000ms;
+}
+
+@mixin contentRightStart {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 1000ms, opacity 3000ms;
+}
+
+@mixin contentRightEnd {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 1000ms, opacity 3000ms;
+}
+
+@mixin contentLeftStart {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 1000ms, opacity 3000ms;
+}
+
+@mixin contentLeftEnd {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 1000ms, opacity 3000ms;
+}
+
+// ==MENU==
+.menu-transition-enter {
+  opacity: 0;
+  left: 200px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+.menu-transition-enter-active {
+  opacity: 1;
+  left: 0;
+  transition: all 300ms;
+}
+.menu-transition-enter-done {
+  opacity: 1;
+  left: 0;
+}
+.menu-transition-exit {
+  opacity: 1;
+  left: 0;
+}
+.menu-transition-exit-active {
+  opacity: 0;
+  left: 90%;
+  transition: all 300ms;
+}
+
+// BUG HANYA DI MOBILE. KALO TRANSITION RIGHT
+// transisi right di mobile ngebuat extra space di
+// bagian kanan sepanjang tranlateX 100%,
+
+// JIKA MOBILE MAKA SEMUA TRANSISI JADI DEFAULT
+
+// ==CONTENT DEFAULT==
+.content-transition-enter {
+  @include contentAppearStart;
+}
+.content-transition-enter-active {
+  @include contentAppearEnd;
+}
+.content-transition-exit {
+  @include contentAppearEnd;
+}
+.content-transition-exit-active {
+  @include contentAppearStart;
+}
+
+//==CONTENT RIGHT==
+.content-transition-right-enter {
+  @include contentRightStart;
+  @media (max-width: $mediumDevice) {
+    @include contentAppearStart;
+  }
+}
+.content-transition-right-enter-active {
+  @include contentRightEnd;
+  @media (max-width: $mediumDevice) {
+    @include contentAppearEnd;
+  }
+}
+.content-transition-right-exit {
+  @include contentRightEnd;
+  @media (max-width: $mediumDevice) {
+    @include contentAppearEnd;
+  }
+}
+.content-transition-right-exit-active {
+  @include contentRightStart;
+  @media (max-width: $mediumDevice) {
+    @include contentAppearStart;
+  }
+}
+
+//==CONTENT LEFT==
+.content-transition-left-enter {
+  @include contentLeftStart;
+  @media (max-width: $mediumDevice) {
+    @include contentAppearStart;
+  }
+}
+.content-transition-left-enter-active {
+  @include contentLeftEnd;
+  @media (max-width: $mediumDevice) {
+    @include contentAppearEnd;
+  }
+}
+.content-transition-left-exit {
+  @include contentLeftEnd;
+  @media (max-width: $mediumDevice) {
+    @include contentAppearEnd;
+  }
+}
+.content-transition-left-exit-active {
+  @include contentLeftStart;
+  @media (max-width: $mediumDevice) {
+    @include contentAppearStart;
+  }
+}
