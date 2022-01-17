@@ -94,9 +94,9 @@ export function AboutMeRight({ containerStyle }) {
   return (
     <RightContainer style={containerStyle}>
       <RightWrapper>
-        <BigText style={{ marginBottom: 30 }}>Hi, i'm Rizky Dwiputra</BigText>
+        <BigText style={{ marginBottom: 30 }}>Hi, I am Rizky Dwiputra</BigText>
         <NormalText style={{ marginBottom: 30, color: color.greyText }}>
-          I'am front end software engineer that have experiences on building web
+          I am front end software engineer that have experiences on building web
           or mobile applications with JavaScript, and still trying to expanding
           my knowledge and learning new technologies to develop a high quality
           software to end user.

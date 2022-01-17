@@ -22,24 +22,24 @@ export default function Home(props) {
   const gradSubTitle = `Hacktiv8 is a coding bootcamp that transforms beginners into full-stack developers in 16 weeks.\n
   I've completed FullStack JavaScript Immersive program from Hacktiv8, and from there i'm starting to create a website or mobile application for a company or for myself.`
 
-  const workSubtitle = `I have experience for developing and maintaining the user interface for web and mobile application at my previous company. \n 
-    And before i started learning code, i have a background in Sharia Finance and Banking Management and also have internship experience in some financial institution.
+  const workSubtitle = `I have experience in developed and maintained user interface in web and mobile application at my previous company. \n 
+  I have a background in Sharia Finance and Banking Management, with internship experience in a couple of financial institution before I shifted my career and started to learn code for my current career.
     `
 
-  const juliSubtitle = `PT. Juli App Indonesia is a tech-based startup focusing on second-hand clothing social marketplace, Merchaner.\n
-    My task is to developing and maintaining the UI for web and mobile application 
+  const juliSubtitle = `PT. Juli App Indonesia is a tech-based startup focusing on second-hand clothing social marketplace, with a website called Merchaner.\n
+    My task is to developed and maintained UI for the web and it mobile application.
     `
 
   const internSubtitle = `I have internship experiences at Bank Indonesia as central bank of indonesia, Otoritas Jasa Keungan as Financial Authority of Indonesia, and Bank Mega Syariah as Financial Institution.
   `
 
-  const projectSubtitle = `Here the projects that i do as a Front End Developer. \n
-    I'am developing and managing the user interface of websites and mobile applications that i worked together with my previous team.
+  const projectSubtitle = `Here the projects that I do as a Front End Developer. \n
+    I am developed and managed user interface of the website and it mobile application with my previous team.
   `
 
-  const merchanerSubtitle = `a social marketplace to sell second-hand/preloved clothing with creating a big community for thrift enthusiast to interact with one another easily.`
+  const merchanerSubtitle = `A social marketplace to sell second-hand/preloved clothing with creating a big community for thrift enthusiast to interact with one another easily.`
 
-  const kitadonorSubtitle = `a web application for broadcasting donor needs, to ease up the process of finding donors for those who are looking for blood or plasma donors.`
+  const kitadonorSubtitle = `A web application for broadcasting donor needs, to ease up the process of finding donors for those who are looking for blood or plasma donors.`
 
   return (
     <Container>
@@ -56,7 +56,10 @@ export default function Home(props) {
         backgroundColor={"#fff"}
         rightBackgroundImg={`url(${baseUrl}/img/hacktiv36.png)`}
         LeftComponent={() => (
-          <TitleContent title="i'm Hacktiv8 Graduate" subTitle={gradSubTitle} />
+          <TitleContent
+            title="I am Hacktiv8 Graduate"
+            subTitle={gradSubTitle}
+          />
         )}
         RightComponent={() => (
           <ImageContent
@@ -88,7 +91,7 @@ export default function Home(props) {
         rightBackgroundImg={`url(${baseUrl}/img/merchaner.png)`}
         LeftComponent={() => (
           <TitleContent
-            title="Front End Developer At PT Juli App Indonesia"
+            title="Front End Developer at PT Juli App Indonesia"
             backgroundColor="#f4f4f4"
             subTitle={juliSubtitle}
             // linkData={{ title: "See Website", href: "https://merchaner.com" }}
